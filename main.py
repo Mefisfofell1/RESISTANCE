@@ -13,6 +13,8 @@ class Game:
         self.leader_changes_to_stop = 5
         self.min_players = 5
         self.max_players = 10
+        self.rebels_lucky_mission = 4
+        self.spies_to_sabotage_lucky_mission = 2
         self.spies_sets = [2, 2, 3, 3, 3, 4]
         self.game_sets = [[2, 3, 2, 3, 3], [2, 3, 3, 3, 4], [2, 3, 3, 4, 4],
                           [3, 4, 4, 5, 5], [3, 4, 4, 5, 5], [3, 4, 4, 5, 5]]
@@ -35,7 +37,6 @@ class Game:
         # Host's appointment
         if self.players_number == 0:
             self.host = gamer
-            self.leaders_index = gamer
             gamer.is_leader = True
 
         # Adding player to the game
@@ -88,24 +89,33 @@ class Game:
             self.spies_list.append(spy)
             spy.is_spy = True
 
-        # Writing to spies of other spies nicknames
+        # Writing spies nicknames to other spies
         for spy in self.spies_list:
             for spy_name in self.spies_list:
                 print(spy_name.nick)
 
     def change_leader(self):
+        # Changing index, if we passed all players
         if self.leaders_index == self.players_number - 1:
             self.leaders_index = 0
         else:
             self.leaders_index += 1
+
+        # Resetting to zero leader_changing_count
+        # if leader was changed too many times
         if self.leader_changing_count == self.leader_changes_to_stop:
             self.leader_changing_count = 0
         else:
             self.leader_changing_count += 1
 
 
-def take_vote(gamer):
-    print(gamer.nick, "do you agree with the group composition")
+def take_vote(gamer, is_mission):
+    if is_mission:
+        print(gamer.nick, "do you want to sabotage the mission?")
+    else:
+        print(gamer.nick, "do you agree with the group composition?")
+
+    # Taking player's answer
     request = input()
     if request == 'Yes':
         return 1
@@ -124,7 +134,8 @@ def group_creating(game):
 
         # Control of nicknames correctness
         if request[0:4] == 'nick':
-            if request.replace("nick", "", 1) in game.nicks_list:
+            if request.replace("nick", "", 1) in game.nicks_list \
+                    and request.replace("nick", "", 1) not in squad:
                 squad.append(request.replace("nick", "", 1))
             else:
                 print("Which nickname is correct? Think,",
@@ -194,13 +205,19 @@ def lobby_assemble(game):
 
 
 def voting(game):
+    # OPTION FOR LEADER ONLY
+    # Time to discuss the group
+    while input() != 'start':
+        continue
+
+    # Creating group and writing about it
     squad = group_creating(game)
     print("Leader's choice", ', '.join(squad))
 
     # Counting of voting results
     voting_result = 0
     for gamer in game.players_list:
-        voting_result += take_vote(gamer)
+        voting_result += take_vote(gamer, False)
     yes_votes = voting_result
     no_votes = game.players_number - voting_result
     print(yes_votes, "players voted for and",
@@ -208,7 +225,8 @@ def voting(game):
 
     # Processing the results of voting
     if yes_votes > no_votes:
-        print(1)
+        game.change_leader()
+        mission(game, squad)
 
     # Failing mission because leader was changed too many times
     elif game.leader_changing_count == game.leader_changes_to_stop:
@@ -223,15 +241,22 @@ def voting(game):
         voting(game)
 
 
+def mission(game, group):
+    mission_result = 0
+    for nick in group:
+        mission_result += take_vote(game.players_list[game.nicks_list.index(nick)], True)
+
+    # Adding points to the command, which won the round
+    if game.round_number == game.rebels_lucky_mission:
+        game.add_points(mission_result >= game.spies_to_sabotage_lucky_mission)
+    else:
+        game.add_points(mission_result > 0)
+
+    game.round_number += 1
+    game.leader_changing_count = 0
+    voting(game)
+
+
 game1 = Game()
 lobby_assemble(game1)
-for man in game1.players_list:
-    print(man.nick, "Is he a spy?", man.is_spy)
-# print(game1.host.nick)
-# print(game1.nicks_list)
-# print(game1.players_number)
-print(game1.players_list)
-print(len(game1.players_list))
-print(game1.set)
-print(game1.spies_number)
-print(group_creating(game1))
+
