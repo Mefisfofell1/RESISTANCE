@@ -3,7 +3,6 @@ import pygame
 import os
 import random
 
-global shit
 game = 1
 
 menu1 = True
