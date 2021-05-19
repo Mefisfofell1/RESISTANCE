@@ -1,0 +1,182 @@
+\hypertarget{classserver_1_1_p2_p}{}\doxysection{server.\+P2P Class Reference}
+\label{classserver_1_1_p2_p}\index{server.P2P@{server.P2P}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classserver_1_1_p2_p_a9236c30fbe48714185b4fcda5db71501}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, int \mbox{\hyperlink{classserver_1_1_p2_p_ab11739b079250b85c88f64282f919c97}{port}}, \mbox{\hyperlink{classserver_1_1_p2_p_a786cbda4aef8b319708b6dabe452cce2}{max\+\_\+clients}})
+\item 
+def \mbox{\hyperlink{classserver_1_1_p2_p_a06ff9584106c797a46dfad90f66e91b1}{create\+\_\+session}} (self, str address)
+\item 
+def \mbox{\hyperlink{classserver_1_1_p2_p_ab968498df01982b4d9b8b3803a472fb1}{close\+\_\+connection}} (self, str address)
+\item 
+def \mbox{\hyperlink{classserver_1_1_p2_p_a1c2d7678a97f413bce82b440b5e60c0d}{kill\+\_\+server}} (self)
+\item 
+def \mbox{\hyperlink{classserver_1_1_p2_p_a569cb2c3423e9c86cd50bde9ee94372c}{send}} (self, str address, bytes message)
+\item 
+def \mbox{\hyperlink{classserver_1_1_p2_p_a5da0529600a2b5db222979efcb735240}{check\+\_\+request}} (self, str address)
+\item 
+def \mbox{\hyperlink{classserver_1_1_p2_p_abf95bb5aea549832dda27f2edf4688d4}{check\+\_\+address}} (self, str address)
+\item 
+def \mbox{\hyperlink{classserver_1_1_p2_p_a9740bf0f6317a088ddf0014678992862}{\+\_\+\+\_\+len\+\_\+\+\_\+}} (self)
+\item 
+def \mbox{\hyperlink{classserver_1_1_p2_p_a3846f2a63bd85f6d06a0dc8857ee299e}{\+\_\+\+\_\+bool\+\_\+\+\_\+}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classserver_1_1_p2_p_a9d345c96874c76c4e5776f3a5752567b}{run}}
+\item 
+\mbox{\hyperlink{classserver_1_1_p2_p_ab11739b079250b85c88f64282f919c97}{port}}
+\item 
+\mbox{\hyperlink{classserver_1_1_p2_p_a786cbda4aef8b319708b6dabe452cce2}{max\+\_\+clients}}
+\item 
+\mbox{\hyperlink{classserver_1_1_p2_p_a5e9cc7b0d12d7451c03d2be57249c294}{max\+\_\+clients\+\_\+ip}}
+\item 
+\mbox{\hyperlink{classserver_1_1_p2_p_a59cb06383ab88e3e4275662df6e2ed33}{incoming\+\_\+requests}}
+\item 
+\mbox{\hyperlink{classserver_1_1_p2_p_aae82ad65b843c2754070f0891490908f}{clients\+\_\+logs}}
+\item 
+\mbox{\hyperlink{classserver_1_1_p2_p_aedd1c212a5e20b42745b2252c007bec0}{client\+\_\+sockets}}
+\item 
+\mbox{\hyperlink{classserver_1_1_p2_p_a77abd17f802d5e95a8218cb63a68791a}{socket\+\_\+busy}}
+\item 
+\mbox{\hyperlink{classserver_1_1_p2_p_a65f852005b63f004181ef76f2dc41102}{blacklist}}
+\item 
+\mbox{\hyperlink{classserver_1_1_p2_p_ad1d161e72b6dda5e536a137a4e727c1e}{server\+\_\+socket}}
+\item 
+\mbox{\hyperlink{classserver_1_1_p2_p_ad4d9cdf581855814aec1084ca7c84bee}{log}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classserver_1_1_p2_p_a9236c30fbe48714185b4fcda5db71501}\label{classserver_1_1_p2_p_a9236c30fbe48714185b4fcda5db71501}} 
+\index{server.P2P@{server.P2P}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!server.P2P@{server.P2P}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def server.\+P2\+P.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{int}]{port,  }\item[{}]{max\+\_\+clients }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classserver_1_1_p2_p_a3846f2a63bd85f6d06a0dc8857ee299e}\label{classserver_1_1_p2_p_a3846f2a63bd85f6d06a0dc8857ee299e}} 
+\index{server.P2P@{server.P2P}!\_\_bool\_\_@{\_\_bool\_\_}}
+\index{\_\_bool\_\_@{\_\_bool\_\_}!server.P2P@{server.P2P}}
+\doxysubsubsection{\texorpdfstring{\_\_bool\_\_()}{\_\_bool\_\_()}}
+{\footnotesize\ttfamily def server.\+P2\+P.\+\_\+\+\_\+bool\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classserver_1_1_p2_p_a9740bf0f6317a088ddf0014678992862}\label{classserver_1_1_p2_p_a9740bf0f6317a088ddf0014678992862}} 
+\index{server.P2P@{server.P2P}!\_\_len\_\_@{\_\_len\_\_}}
+\index{\_\_len\_\_@{\_\_len\_\_}!server.P2P@{server.P2P}}
+\doxysubsubsection{\texorpdfstring{\_\_len\_\_()}{\_\_len\_\_()}}
+{\footnotesize\ttfamily def server.\+P2\+P.\+\_\+\+\_\+len\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classserver_1_1_p2_p_abf95bb5aea549832dda27f2edf4688d4}\label{classserver_1_1_p2_p_abf95bb5aea549832dda27f2edf4688d4}} 
+\index{server.P2P@{server.P2P}!check\_address@{check\_address}}
+\index{check\_address@{check\_address}!server.P2P@{server.P2P}}
+\doxysubsubsection{\texorpdfstring{check\_address()}{check\_address()}}
+{\footnotesize\ttfamily def server.\+P2\+P.\+check\+\_\+address (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{address }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classserver_1_1_p2_p_a5da0529600a2b5db222979efcb735240}\label{classserver_1_1_p2_p_a5da0529600a2b5db222979efcb735240}} 
+\index{server.P2P@{server.P2P}!check\_request@{check\_request}}
+\index{check\_request@{check\_request}!server.P2P@{server.P2P}}
+\doxysubsubsection{\texorpdfstring{check\_request()}{check\_request()}}
+{\footnotesize\ttfamily def server.\+P2\+P.\+check\+\_\+request (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{address }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classserver_1_1_p2_p_ab968498df01982b4d9b8b3803a472fb1}\label{classserver_1_1_p2_p_ab968498df01982b4d9b8b3803a472fb1}} 
+\index{server.P2P@{server.P2P}!close\_connection@{close\_connection}}
+\index{close\_connection@{close\_connection}!server.P2P@{server.P2P}}
+\doxysubsubsection{\texorpdfstring{close\_connection()}{close\_connection()}}
+{\footnotesize\ttfamily def server.\+P2\+P.\+close\+\_\+connection (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{address }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classserver_1_1_p2_p_a06ff9584106c797a46dfad90f66e91b1}\label{classserver_1_1_p2_p_a06ff9584106c797a46dfad90f66e91b1}} 
+\index{server.P2P@{server.P2P}!create\_session@{create\_session}}
+\index{create\_session@{create\_session}!server.P2P@{server.P2P}}
+\doxysubsubsection{\texorpdfstring{create\_session()}{create\_session()}}
+{\footnotesize\ttfamily def server.\+P2\+P.\+create\+\_\+session (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{address }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classserver_1_1_p2_p_a1c2d7678a97f413bce82b440b5e60c0d}\label{classserver_1_1_p2_p_a1c2d7678a97f413bce82b440b5e60c0d}} 
+\index{server.P2P@{server.P2P}!kill\_server@{kill\_server}}
+\index{kill\_server@{kill\_server}!server.P2P@{server.P2P}}
+\doxysubsubsection{\texorpdfstring{kill\_server()}{kill\_server()}}
+{\footnotesize\ttfamily def server.\+P2\+P.\+kill\+\_\+server (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classserver_1_1_p2_p_a569cb2c3423e9c86cd50bde9ee94372c}\label{classserver_1_1_p2_p_a569cb2c3423e9c86cd50bde9ee94372c}} 
+\index{server.P2P@{server.P2P}!send@{send}}
+\index{send@{send}!server.P2P@{server.P2P}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}}
+{\footnotesize\ttfamily def server.\+P2\+P.\+send (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{address,  }\item[{bytes}]{message }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classserver_1_1_p2_p_a65f852005b63f004181ef76f2dc41102}\label{classserver_1_1_p2_p_a65f852005b63f004181ef76f2dc41102}} 
+\index{server.P2P@{server.P2P}!blacklist@{blacklist}}
+\index{blacklist@{blacklist}!server.P2P@{server.P2P}}
+\doxysubsubsection{\texorpdfstring{blacklist}{blacklist}}
+{\footnotesize\ttfamily server.\+P2\+P.\+blacklist}
+
+\mbox{\Hypertarget{classserver_1_1_p2_p_aedd1c212a5e20b42745b2252c007bec0}\label{classserver_1_1_p2_p_aedd1c212a5e20b42745b2252c007bec0}} 
+\index{server.P2P@{server.P2P}!client\_sockets@{client\_sockets}}
+\index{client\_sockets@{client\_sockets}!server.P2P@{server.P2P}}
+\doxysubsubsection{\texorpdfstring{client\_sockets}{client\_sockets}}
+{\footnotesize\ttfamily server.\+P2\+P.\+client\+\_\+sockets}
+
+\mbox{\Hypertarget{classserver_1_1_p2_p_aae82ad65b843c2754070f0891490908f}\label{classserver_1_1_p2_p_aae82ad65b843c2754070f0891490908f}} 
+\index{server.P2P@{server.P2P}!clients\_logs@{clients\_logs}}
+\index{clients\_logs@{clients\_logs}!server.P2P@{server.P2P}}
+\doxysubsubsection{\texorpdfstring{clients\_logs}{clients\_logs}}
+{\footnotesize\ttfamily server.\+P2\+P.\+clients\+\_\+logs}
+
+\mbox{\Hypertarget{classserver_1_1_p2_p_a59cb06383ab88e3e4275662df6e2ed33}\label{classserver_1_1_p2_p_a59cb06383ab88e3e4275662df6e2ed33}} 
+\index{server.P2P@{server.P2P}!incoming\_requests@{incoming\_requests}}
+\index{incoming\_requests@{incoming\_requests}!server.P2P@{server.P2P}}
+\doxysubsubsection{\texorpdfstring{incoming\_requests}{incoming\_requests}}
+{\footnotesize\ttfamily server.\+P2\+P.\+incoming\+\_\+requests}
+
+\mbox{\Hypertarget{classserver_1_1_p2_p_ad4d9cdf581855814aec1084ca7c84bee}\label{classserver_1_1_p2_p_ad4d9cdf581855814aec1084ca7c84bee}} 
+\index{server.P2P@{server.P2P}!log@{log}}
+\index{log@{log}!server.P2P@{server.P2P}}
+\doxysubsubsection{\texorpdfstring{log}{log}}
+{\footnotesize\ttfamily server.\+P2\+P.\+log}
+
+\mbox{\Hypertarget{classserver_1_1_p2_p_a786cbda4aef8b319708b6dabe452cce2}\label{classserver_1_1_p2_p_a786cbda4aef8b319708b6dabe452cce2}} 
+\index{server.P2P@{server.P2P}!max\_clients@{max\_clients}}
+\index{max\_clients@{max\_clients}!server.P2P@{server.P2P}}
+\doxysubsubsection{\texorpdfstring{max\_clients}{max\_clients}}
+{\footnotesize\ttfamily server.\+P2\+P.\+max\+\_\+clients}
+
+\mbox{\Hypertarget{classserver_1_1_p2_p_a5e9cc7b0d12d7451c03d2be57249c294}\label{classserver_1_1_p2_p_a5e9cc7b0d12d7451c03d2be57249c294}} 
+\index{server.P2P@{server.P2P}!max\_clients\_ip@{max\_clients\_ip}}
+\index{max\_clients\_ip@{max\_clients\_ip}!server.P2P@{server.P2P}}
+\doxysubsubsection{\texorpdfstring{max\_clients\_ip}{max\_clients\_ip}}
+{\footnotesize\ttfamily server.\+P2\+P.\+max\+\_\+clients\+\_\+ip}
+
+\mbox{\Hypertarget{classserver_1_1_p2_p_ab11739b079250b85c88f64282f919c97}\label{classserver_1_1_p2_p_ab11739b079250b85c88f64282f919c97}} 
+\index{server.P2P@{server.P2P}!port@{port}}
+\index{port@{port}!server.P2P@{server.P2P}}
+\doxysubsubsection{\texorpdfstring{port}{port}}
+{\footnotesize\ttfamily server.\+P2\+P.\+port}
+
+\mbox{\Hypertarget{classserver_1_1_p2_p_a9d345c96874c76c4e5776f3a5752567b}\label{classserver_1_1_p2_p_a9d345c96874c76c4e5776f3a5752567b}} 
+\index{server.P2P@{server.P2P}!run@{run}}
+\index{run@{run}!server.P2P@{server.P2P}}
+\doxysubsubsection{\texorpdfstring{run}{run}}
+{\footnotesize\ttfamily server.\+P2\+P.\+run}
+
+\mbox{\Hypertarget{classserver_1_1_p2_p_ad1d161e72b6dda5e536a137a4e727c1e}\label{classserver_1_1_p2_p_ad1d161e72b6dda5e536a137a4e727c1e}} 
+\index{server.P2P@{server.P2P}!server\_socket@{server\_socket}}
+\index{server\_socket@{server\_socket}!server.P2P@{server.P2P}}
+\doxysubsubsection{\texorpdfstring{server\_socket}{server\_socket}}
+{\footnotesize\ttfamily server.\+P2\+P.\+server\+\_\+socket}
+
+\mbox{\Hypertarget{classserver_1_1_p2_p_a77abd17f802d5e95a8218cb63a68791a}\label{classserver_1_1_p2_p_a77abd17f802d5e95a8218cb63a68791a}} 
+\index{server.P2P@{server.P2P}!socket\_busy@{socket\_busy}}
+\index{socket\_busy@{socket\_busy}!server.P2P@{server.P2P}}
+\doxysubsubsection{\texorpdfstring{socket\_busy}{socket\_busy}}
+{\footnotesize\ttfamily server.\+P2\+P.\+socket\+\_\+busy}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Projects/res\+\_\+p2p/\mbox{\hyperlink{server_8py}{server.\+py}}\end{DoxyCompactItemize}
