@@ -29,7 +29,7 @@ def load_image(name, colorkey=None):
     try:
         image = pygame.image.load(fullname)
         return image
-    except pygame.error, message:
+    except pygame.error as message:
         print ('Cannot load image:', name)
         raise SystemExit(message)
 
