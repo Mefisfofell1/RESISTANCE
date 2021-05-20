@@ -1,6 +1,9 @@
 BRANCH FOR LOGIC
+
 To start playing, type nicks and start
+
 TEST SAMPLE 
+
 nickSevadan
 nickAssimilar
 nickLonvel
